@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Résultat</h1>
+
+    <p id="score"></p>
+    <p id="message"></p>
+
+    <script>
+      const result = JSON.parse(localStorage.getItem("result"));
+      document.getElementById("score").innerText =
+        "Note : " + result.score + "/100";
+
+      document.getElementById("message").innerText =
+        "Message : " + result.message;
+    </script>
+</body>
+</html>
